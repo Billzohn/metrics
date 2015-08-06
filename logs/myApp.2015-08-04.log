@@ -1,0 +1,1108 @@
+11:24:29.856 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+11:24:29.860 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 11:24:29 CST 2015]; parent: Root WebApplicationContext
+11:24:29.862 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+11:24:30.354 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.index()
+11:24:30.355 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.document()
+11:24:30.355 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.association()
+11:24:30.356 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.TestController.test()
+11:24:30.358 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/createAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.createAssociation(metrics.rest.dto.AssociationRequest)
+11:24:30.358 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/updateAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.updateAssociation(metrics.rest.dto.AssociationRequest)
+11:24:30.359 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociations],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.rest.dto.AssociationResponse> metrics.rest.AssociationController.queryAssociations(metrics.rest.dto.AssociationCriteria)
+11:24:30.359 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociationsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.AssociationController.queryAssociationsCount(metrics.rest.dto.AssociationCriteria)
+11:24:30.361 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.create(metrics.model.Document)
+11:24:30.362 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.update(metrics.model.Document)
+11:24:30.362 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.enabled(java.lang.Long,java.lang.Integer)
+11:24:30.362 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocumentsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.queryDocumentsCount(metrics.rest.dto.DocumentQueryCriteria)
+11:24:30.362 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocuments],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Document> metrics.rest.DocumentController.queryDocuments(metrics.rest.dto.DocumentQueryCriteria)
+11:24:30.363 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Document metrics.rest.DocumentController.findOne(java.lang.Long)
+11:24:30.369 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.create(metrics.model.Theme)
+11:24:30.369 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.update(metrics.model.Theme)
+11:24:30.370 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.enabled(java.lang.Long,java.lang.Integer)
+11:24:30.370 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemesCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.queryThemesCount(java.lang.String)
+11:24:30.371 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryThemes(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+11:24:30.371 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryValidThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryValidThemes()
+11:24:30.371 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Theme metrics.rest.ThemeController.findOne(java.lang.Long)
+11:24:31.394 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 11:24:29 CST 2015]; parent: Root WebApplicationContext
+11:24:31.537 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 11:24:29 CST 2015]; parent: Root WebApplicationContext
+11:24:31.694 [main] INFO  metrics.controller.TestController - =============================
+11:24:31.832 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+11:24:31.932 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 2075 ms
+11:28:53.226 [qtp502080621-15] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/feedback/index] in DispatcherServlet with name 'appServlet'
+11:28:53.281 [qtp502080621-16] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'appServlet'
+11:30:29.940 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+11:30:29.945 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 11:30:29 CST 2015]; parent: Root WebApplicationContext
+11:30:29.946 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+11:30:30.436 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.index()
+11:30:30.437 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.login()
+11:30:30.437 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.association()
+11:30:30.438 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.document()
+11:30:30.438 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.TestController.test()
+11:30:30.441 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/createAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.createAssociation(metrics.rest.dto.AssociationRequest)
+11:30:30.441 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/updateAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.updateAssociation(metrics.rest.dto.AssociationRequest)
+11:30:30.442 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociations],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.rest.dto.AssociationResponse> metrics.rest.AssociationController.queryAssociations(metrics.rest.dto.AssociationCriteria)
+11:30:30.442 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociationsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.AssociationController.queryAssociationsCount(metrics.rest.dto.AssociationCriteria)
+11:30:30.445 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.create(metrics.model.Document)
+11:30:30.446 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.update(metrics.model.Document)
+11:30:30.446 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.enabled(java.lang.Long,java.lang.Integer)
+11:30:30.446 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocumentsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.queryDocumentsCount(metrics.rest.dto.DocumentQueryCriteria)
+11:30:30.446 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocuments],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Document> metrics.rest.DocumentController.queryDocuments(metrics.rest.dto.DocumentQueryCriteria)
+11:30:30.447 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Document metrics.rest.DocumentController.findOne(java.lang.Long)
+11:30:30.450 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.create(metrics.model.Theme)
+11:30:30.450 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.update(metrics.model.Theme)
+11:30:30.450 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.enabled(java.lang.Long,java.lang.Integer)
+11:30:30.451 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemesCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.queryThemesCount(java.lang.String)
+11:30:30.451 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryValidThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryValidThemes()
+11:30:30.451 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryThemes(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+11:30:30.451 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Theme metrics.rest.ThemeController.findOne(java.lang.Long)
+11:30:31.339 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 11:30:29 CST 2015]; parent: Root WebApplicationContext
+11:30:31.483 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 11:30:29 CST 2015]; parent: Root WebApplicationContext
+11:30:31.627 [main] INFO  metrics.controller.TestController - =============================
+11:30:31.782 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+11:30:31.903 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1963 ms
+15:12:17.293 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+15:12:17.307 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 15:12:17 CST 2015]; parent: Root WebApplicationContext
+15:12:17.308 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+15:12:17.337 [main] WARN  o.s.beans.factory.xml.XmlBeanDefinitionReader - Ignored XML validation warning
+org.xml.sax.SAXParseException: SchemaLocation: schemaLocation 值 'http://www.springframework.org/schema/beans/spring-beans.xsd     http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd     http://www.springframework.org/schema/aop        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd     http://www.springframework.org/schema/context     http://www.springframework.org/schema/context/spring-context.xsd' 必须具有偶数个 URI。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:99) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:433) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:458) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.storeLocations(XMLSchemaValidator.java:2353) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1760) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) [na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+15:12:17.340 [main] ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 14 in XML document from class path resource [config/servlet-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 72; cvc-elt.1: 找不到元素 'beans:beans' 的声明。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: org.xml.sax.SAXParseException: cvc-elt.1: 找不到元素 'beans:beans' 的声明。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1906) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) ~[na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 30 common frames omitted
+15:35:39.121 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+15:35:39.140 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 15:35:39 CST 2015]; parent: Root WebApplicationContext
+15:35:39.142 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+15:35:39.159 [main] WARN  o.s.beans.factory.xml.XmlBeanDefinitionReader - Ignored XML validation warning
+org.xml.sax.SAXParseException: SchemaLocation: schemaLocation 值 'http://www.springframework.org/schema/beans/spring-beans-4.1.xsd     http://www.springframework.org/schema/context          http://www.springframework.org/schema/context/spring-context-4.1.xsd     http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd     http://www.springframework.org/schema/aop        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd' 必须具有偶数个 URI。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:99) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:433) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:458) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.storeLocations(XMLSchemaValidator.java:2353) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1760) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) [na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+15:35:39.163 [main] ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 13 in XML document from class path resource [config/servlet-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 13; columnNumber: 71; cvc-elt.1: 找不到元素 'beans' 的声明。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: org.xml.sax.SAXParseException: cvc-elt.1: 找不到元素 'beans' 的声明。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1906) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) ~[na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 30 common frames omitted
+15:38:39.677 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+15:38:39.681 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 15:38:39 CST 2015]; parent: Root WebApplicationContext
+15:38:39.682 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+15:38:39.695 [main] WARN  o.s.beans.factory.xml.XmlBeanDefinitionReader - Ignored XML validation warning
+org.xml.sax.SAXParseException: SchemaLocation: schemaLocation 值 'http://www.springframework.org/schema/beans/spring-beans-4.1.xsd     http://www.springframework.org/schema/context          http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd     http://www.springframework.org/schema/aop        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd' 必须具有偶数个 URI。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:99) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:433) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:458) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.storeLocations(XMLSchemaValidator.java:2353) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1760) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) [na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+15:38:39.699 [main] ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 13 in XML document from class path resource [config/servlet-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 13; columnNumber: 71; cvc-elt.1: 找不到元素 'beans' 的声明。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: org.xml.sax.SAXParseException: cvc-elt.1: 找不到元素 'beans' 的声明。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1906) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) ~[na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 30 common frames omitted
+15:41:23.939 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+15:41:23.942 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 15:41:23 CST 2015]; parent: Root WebApplicationContext
+15:41:23.944 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+15:41:23.972 [main] WARN  o.s.beans.factory.xml.XmlBeanDefinitionReader - Ignored XML validation warning
+org.xml.sax.SAXParseException: SchemaLocation: schemaLocation 值 ' http://www.springframework.org/schema/beans/spring-beans-4.1.xsd      http://www.springframework.org/schema/context          http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd     http://www.springframework.org/schema/aop        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd' 必须具有偶数个 URI。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:99) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:433) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:458) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.storeLocations(XMLSchemaValidator.java:2353) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1760) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) [na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+15:41:23.975 [main] ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 13 in XML document from class path resource [config/servlet-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 13; columnNumber: 71; cvc-elt.1: 找不到元素 'beans' 的声明。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: org.xml.sax.SAXParseException: cvc-elt.1: 找不到元素 'beans' 的声明。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1906) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) ~[na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 30 common frames omitted
+15:46:23.353 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+15:46:23.357 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 15:46:23 CST 2015]; parent: Root WebApplicationContext
+15:46:23.358 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+15:46:23.378 [main] WARN  o.s.beans.factory.xml.XmlBeanDefinitionReader - Ignored XML validation warning
+org.xml.sax.SAXParseException: SchemaLocation: schemaLocation 值 ' http://www.springframework.org/schema/beans/spring-beans.xsd      http://www.springframework.org/schema/context          http://www.springframework.org/schema/context/spring-context-4.1.xsd     http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd     http://www.springframework.org/schema/aop        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd' 必须具有偶数个 URI。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:99) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:433) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:458) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.storeLocations(XMLSchemaValidator.java:2353) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1760) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) [na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+15:46:23.382 [main] ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 13 in XML document from class path resource [config/servlet-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 13; columnNumber: 71; cvc-elt.1: 找不到元素 'beans' 的声明。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: org.xml.sax.SAXParseException: cvc-elt.1: 找不到元素 'beans' 的声明。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1906) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) ~[na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 30 common frames omitted
+15:52:40.393 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+15:52:40.397 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 15:52:40 CST 2015]; parent: Root WebApplicationContext
+15:52:40.399 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+15:52:40.422 [main] WARN  o.s.beans.factory.xml.XmlBeanDefinitionReader - Ignored XML validation warning
+org.xml.sax.SAXParseException: SchemaLocation: schemaLocation 值 'http://www.springframework.org/schema/beans/spring-beans-4.1.xsd      http://www.springframework.org/schema/context          http://www.springframework.org/schema/context/spring-context-4.1.xsd     http://www.springframework.org/schema/mvc     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd     http://www.springframework.org/schema/aop        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd' 必须具有偶数个 URI。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:99) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:433) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:458) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.storeLocations(XMLSchemaValidator.java:2353) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1760) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) [na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) [na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) [spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) [spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) [spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+15:52:40.426 [main] ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 13 in XML document from class path resource [config/servlet-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 13; columnNumber: 71; cvc-elt.1: 找不到元素 'beans' 的声明。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:216) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:187) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: org.xml.sax.SAXParseException: cvc-elt.1: 找不到元素 'beans' 的声明。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1906) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:746) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:379) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:605) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3138) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:880) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:117) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243) ~[na:1.7.0_67]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347) ~[na:1.7.0_67]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 30 common frames omitted
+16:03:54.554 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+16:03:54.559 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:03:54 CST 2015]; parent: Root WebApplicationContext
+16:03:54.560 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+16:03:55.574 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.LoginController.index()
+16:03:55.574 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.LoginController.login()
+16:03:55.575 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.LoginController.document()
+16:03:55.575 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.LoginController.association()
+16:03:55.593 [main] WARN  o.s.web.context.support.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'mainController' bean method 
+public java.lang.String metrics.controller.MainController.index()
+to {[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}: There is already 'loginController' bean method
+public java.lang.String metrics.controller.LoginController.index() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:540) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'mainController' bean method 
+public java.lang.String metrics.controller.MainController.index()
+to {[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}: There is already 'loginController' bean method
+public java.lang.String metrics.controller.LoginController.index() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:187) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:147) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:126) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1627) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1564) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 29 common frames omitted
+16:03:55.597 [main] ERROR org.springframework.web.servlet.DispatcherServlet - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'mainController' bean method 
+public java.lang.String metrics.controller.MainController.index()
+to {[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}: There is already 'loginController' bean method
+public java.lang.String metrics.controller.LoginController.index() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1568) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:540) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136) [spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:242) [servlet-api-3.0.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:492) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHolder.doStart(ServletHolder.java:312) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:777) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258) [jetty-servlet-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454) [jetty-webapp-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263) [jetty-server-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59) [jetty-util-8.1.2.v20120308.jar:8.1.2.v20120308]
+	at runjettyrun.Bootstrap.main(Bootstrap.java:80) [run-jetty-run-bootstrap-jetty8.jar:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'mainController' bean method 
+public java.lang.String metrics.controller.MainController.index()
+to {[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}: There is already 'loginController' bean method
+public java.lang.String metrics.controller.LoginController.index() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:187) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:147) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:126) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:126) ~[spring-webmvc-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1627) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1564) ~[spring-beans-4.1.1.RELEASE.jar:4.1.1.RELEASE]
+	... 29 common frames omitted
+16:05:06.626 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+16:05:06.630 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:05:06 CST 2015]; parent: Root WebApplicationContext
+16:05:06.631 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+16:05:07.672 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.index()
+16:05:07.673 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.login()
+16:05:07.674 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.association()
+16:05:07.674 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.document()
+16:05:07.675 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.TestController.test()
+16:05:07.683 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociations],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.rest.dto.AssociationResponse> metrics.rest.AssociationController.queryAssociations(metrics.rest.dto.AssociationCriteria)
+16:05:07.684 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociationsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.AssociationController.queryAssociationsCount(metrics.rest.dto.AssociationCriteria)
+16:05:07.685 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/createAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.createAssociation(metrics.rest.dto.AssociationRequest)
+16:05:07.685 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/updateAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.updateAssociation(metrics.rest.dto.AssociationRequest)
+16:05:07.689 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.create(metrics.model.Document)
+16:05:07.689 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.update(metrics.model.Document)
+16:05:07.690 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.enabled(java.lang.Long,java.lang.Integer)
+16:05:07.690 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocumentsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.queryDocumentsCount(metrics.rest.dto.DocumentQueryCriteria)
+16:05:07.690 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocuments],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Document> metrics.rest.DocumentController.queryDocuments(metrics.rest.dto.DocumentQueryCriteria)
+16:05:07.691 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Document metrics.rest.DocumentController.findOne(java.lang.Long)
+16:05:07.697 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.create(metrics.model.Theme)
+16:05:07.698 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.update(metrics.model.Theme)
+16:05:07.698 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.enabled(java.lang.Long,java.lang.Integer)
+16:05:07.699 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemesCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.queryThemesCount(java.lang.String)
+16:05:07.699 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryThemes(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+16:05:07.700 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryValidThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryValidThemes()
+16:05:07.701 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Theme metrics.rest.ThemeController.findOne(java.lang.Long)
+16:05:09.101 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:05:06 CST 2015]; parent: Root WebApplicationContext
+16:05:09.590 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:05:06 CST 2015]; parent: Root WebApplicationContext
+16:05:09.790 [main] INFO  metrics.controller.TestController - =============================
+16:05:09.981 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+16:05:10.154 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 3527 ms
+16:05:21.185 [qtp764262251-14] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/feedback/index] in DispatcherServlet with name 'appServlet'
+16:05:27.000 [qtp764262251-17] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:05:27.001 [qtp764262251-17] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.455 [qtp764262251-17] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.455 [qtp764262251-17] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.461 [qtp764262251-18] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.461 [qtp764262251-18] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.552 [qtp764262251-16] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.552 [qtp764262251-16] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.613 [qtp764262251-19] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.613 [qtp764262251-19] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.626 [qtp764262251-17] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.627 [qtp764262251-17] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.635 [qtp764262251-16] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.635 [qtp764262251-16] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.657 [qtp764262251-14] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.658 [qtp764262251-14] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.678 [qtp764262251-19] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.679 [qtp764262251-19] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.911 [qtp764262251-15] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.912 [qtp764262251-15] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:47.913 [qtp764262251-18] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:47.913 [qtp764262251-18] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:48.025 [qtp764262251-16] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:48.025 [qtp764262251-16] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:09:53.327 [qtp764262251-19] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+16:09:53.328 [qtp764262251-19] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - 错误: 字段 u.id 不存在
+  位置：10
+16:15:24.397 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+16:15:24.402 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:15:24 CST 2015]; parent: Root WebApplicationContext
+16:15:24.405 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+16:15:25.451 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.index()
+16:15:25.452 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.login()
+16:15:25.452 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.document()
+16:15:25.452 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.association()
+16:15:25.454 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.TestController.test()
+16:15:25.457 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/createAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.createAssociation(metrics.rest.dto.AssociationRequest)
+16:15:25.458 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/updateAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.updateAssociation(metrics.rest.dto.AssociationRequest)
+16:15:25.459 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociations],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.rest.dto.AssociationResponse> metrics.rest.AssociationController.queryAssociations(metrics.rest.dto.AssociationCriteria)
+16:15:25.459 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociationsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.AssociationController.queryAssociationsCount(metrics.rest.dto.AssociationCriteria)
+16:15:25.464 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.update(metrics.model.Document)
+16:15:25.466 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.create(metrics.model.Document)
+16:15:25.468 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.enabled(java.lang.Long,java.lang.Integer)
+16:15:25.469 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Document metrics.rest.DocumentController.findOne(java.lang.Long)
+16:15:25.469 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocumentsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.queryDocumentsCount(metrics.rest.dto.DocumentQueryCriteria)
+16:15:25.470 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocuments],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Document> metrics.rest.DocumentController.queryDocuments(metrics.rest.dto.DocumentQueryCriteria)
+16:15:25.476 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.update(metrics.model.Theme)
+16:15:25.477 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.create(metrics.model.Theme)
+16:15:25.478 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.enabled(java.lang.Long,java.lang.Integer)
+16:15:25.480 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryThemes(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+16:15:25.482 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Theme metrics.rest.ThemeController.findOne(java.lang.Long)
+16:15:25.483 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryValidThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryValidThemes()
+16:15:25.483 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemesCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.queryThemesCount(java.lang.String)
+16:15:26.446 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:15:24 CST 2015]; parent: Root WebApplicationContext
+16:15:26.673 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:15:24 CST 2015]; parent: Root WebApplicationContext
+16:15:26.908 [main] INFO  metrics.controller.TestController - =============================
+16:15:27.134 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+16:15:27.304 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 2906 ms
+16:21:38.252 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+16:21:38.257 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:21:38 CST 2015]; parent: Root WebApplicationContext
+16:21:38.260 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+16:21:39.343 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.index()
+16:21:39.344 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.login()
+16:21:39.347 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.document()
+16:21:39.347 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.association()
+16:21:39.348 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.TestController.test()
+16:21:39.352 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociations],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.rest.dto.AssociationResponse> metrics.rest.AssociationController.queryAssociations(metrics.rest.dto.AssociationCriteria)
+16:21:39.353 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociationsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.AssociationController.queryAssociationsCount(metrics.rest.dto.AssociationCriteria)
+16:21:39.354 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/createAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.createAssociation(metrics.rest.dto.AssociationRequest)
+16:21:39.354 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/updateAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.updateAssociation(metrics.rest.dto.AssociationRequest)
+16:21:39.359 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.create(metrics.model.Document)
+16:21:39.359 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.update(metrics.model.Document)
+16:21:39.360 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.enabled(java.lang.Long,java.lang.Integer)
+16:21:39.360 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Document metrics.rest.DocumentController.findOne(java.lang.Long)
+16:21:39.361 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocumentsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.queryDocumentsCount(metrics.rest.dto.DocumentQueryCriteria)
+16:21:39.365 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocuments],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Document> metrics.rest.DocumentController.queryDocuments(metrics.rest.dto.DocumentQueryCriteria)
+16:21:39.369 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.create(metrics.model.Theme)
+16:21:39.369 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.update(metrics.model.Theme)
+16:21:39.369 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.enabled(java.lang.Long,java.lang.Integer)
+16:21:39.370 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Theme metrics.rest.ThemeController.findOne(java.lang.Long)
+16:21:39.371 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemesCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.queryThemesCount(java.lang.String)
+16:21:39.371 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryValidThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryValidThemes()
+16:21:39.372 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryThemes(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+16:21:40.178 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:21:38 CST 2015]; parent: Root WebApplicationContext
+16:21:40.472 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:21:38 CST 2015]; parent: Root WebApplicationContext
+16:21:40.745 [main] INFO  metrics.controller.TestController - =============================
+16:21:40.968 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+16:21:41.144 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 2892 ms
+16:25:28.541 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+16:25:28.547 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:25:28 CST 2015]; parent: Root WebApplicationContext
+16:25:28.548 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+16:25:29.598 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.index()
+16:25:29.599 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.login()
+16:25:29.600 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.document()
+16:25:29.601 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.association()
+16:25:29.603 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.TestController.test()
+16:25:29.607 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/createAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.createAssociation(metrics.rest.dto.AssociationRequest)
+16:25:29.608 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/updateAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.updateAssociation(metrics.rest.dto.AssociationRequest)
+16:25:29.609 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociations],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.rest.dto.AssociationResponse> metrics.rest.AssociationController.queryAssociations(metrics.rest.dto.AssociationCriteria)
+16:25:29.610 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociationsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.AssociationController.queryAssociationsCount(metrics.rest.dto.AssociationCriteria)
+16:25:29.622 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.update(metrics.model.Document)
+16:25:29.623 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.create(metrics.model.Document)
+16:25:29.623 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.enabled(java.lang.Long,java.lang.Integer)
+16:25:29.624 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Document metrics.rest.DocumentController.findOne(java.lang.Long)
+16:25:29.624 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocumentsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.queryDocumentsCount(metrics.rest.dto.DocumentQueryCriteria)
+16:25:29.625 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocuments],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Document> metrics.rest.DocumentController.queryDocuments(metrics.rest.dto.DocumentQueryCriteria)
+16:25:29.629 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.update(metrics.model.Theme)
+16:25:29.630 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.create(metrics.model.Theme)
+16:25:29.630 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.enabled(java.lang.Long,java.lang.Integer)
+16:25:29.631 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Theme metrics.rest.ThemeController.findOne(java.lang.Long)
+16:25:29.632 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemesCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.queryThemesCount(java.lang.String)
+16:25:29.632 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryThemes(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+16:25:29.633 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryValidThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryValidThemes()
+16:25:30.389 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:25:28 CST 2015]; parent: Root WebApplicationContext
+16:25:30.647 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:25:28 CST 2015]; parent: Root WebApplicationContext
+16:25:30.843 [main] INFO  metrics.controller.TestController - =============================
+16:25:31.097 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+16:25:31.297 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 2755 ms
+16:27:41.897 [qtp876938595-16] INFO  annotation.log.SystemLogAspect - Controller===metrics.controller.MainController=====index=====创建元词:=====
+16:27:42.887 [qtp876938595-15] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：word;。业务：统计查询主题词分页信息
+16:27:43.060 [qtp876938595-17] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:43.175 [qtp876938595-20] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：word;propertyid;page0;directionASC;size20;。业务：查询主题词信息
+16:27:44.623 [qtp876938595-19] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/dashboard/ie-emulation-modes-warning.js] in DispatcherServlet with name 'appServlet'
+16:27:44.769 [qtp876938595-16] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：gender2;brandEN;brandCN;merchandiseName;merchandiseId;。业务：统计文档信息
+16:27:44.788 [qtp876938595-15] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:44.824 [qtp876938595-17] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：merchandiseName;page0;directionASC;merchandiseId;gender2;brandEN;propertyid;brandCN;size20;。业务：查询文档信息
+16:27:46.133 [qtp876938595-19] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:27:46.177 [qtp876938595-20] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:46.205 [qtp876938595-17] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：flag;themeId;page0;directionASC;propertytid;size20;。业务：查询主题关联度信息
+16:27:47.344 [qtp876938595-17] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:27:47.373 [qtp876938595-16] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:47.420 [qtp876938595-15] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：flag;themeId;page0;directionASC;propertytid;size20;。业务：查询主题关联度信息
+16:27:48.741 [qtp876938595-16] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:27:48.839 [qtp876938595-15] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:48.840 [qtp876938595-19] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：flag;themeId;page0;directionASC;propertytid;size20;。业务：查询主题关联度信息
+16:27:50.716 [qtp876938595-16] INFO  annotation.log.SystemLogAspect - Controller===metrics.controller.MainController=====index=====创建元词:=====
+16:27:50.816 [qtp876938595-15] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：word;。业务：统计查询主题词分页信息
+16:27:50.889 [qtp876938595-19] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:50.893 [qtp876938595-17] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：word;propertyid;page0;directionASC;size20;。业务：查询主题词信息
+16:27:51.628 [qtp876938595-16] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/dashboard/ie-emulation-modes-warning.js] in DispatcherServlet with name 'appServlet'
+16:27:51.700 [qtp876938595-15] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：gender2;brandEN;brandCN;merchandiseName;merchandiseId;。业务：统计文档信息
+16:27:51.736 [qtp876938595-19] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:51.763 [qtp876938595-14] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：merchandiseName;page0;directionASC;merchandiseId;gender2;brandEN;propertyid;brandCN;size20;。业务：查询文档信息
+16:27:52.790 [qtp876938595-19] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:27:52.850 [qtp876938595-14] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:52.879 [qtp876938595-20] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：flag;themeId;page0;directionASC;propertytid;size20;。业务：查询主题关联度信息
+16:27:53.570 [qtp876938595-19] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:27:53.641 [qtp876938595-14] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:53.660 [qtp876938595-20] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54486； 远程地址：0:0:0:0:0:0:0:1；参数：flag;themeId;page0;directionASC;propertytid;size20;。业务：查询主题关联度信息
+16:27:54.213 [qtp876938595-19] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:27:54.274 [qtp876938595-14] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:27:54.306 [qtp876938595-20] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：flag;themeId;page0;directionASC;propertytid;size20;。业务：查询主题关联度信息
+16:28:10.204 [qtp876938595-19] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/dashboard/ie-emulation-modes-warning.js] in DispatcherServlet with name 'appServlet'
+16:28:10.290 [qtp876938595-14] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：gender2;brandEN;brandCN;merchandiseName;merchandiseId;。业务：统计文档信息
+16:28:10.337 [qtp876938595-20] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:28:10.366 [qtp876938595-16] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：merchandiseName;page0;directionASC;merchandiseId;gender2;brandEN;propertyid;brandCN;size20;。业务：查询文档信息
+16:29:29.241 [qtp876938595-16] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54489； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:29:29.258 [qtp876938595-16] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+16:29:29.303 [qtp876938595-16] INFO  o.s.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+16:30:18.998 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+16:30:19.004 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:30:19 CST 2015]; parent: Root WebApplicationContext
+16:30:19.006 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [config/servlet-context.xml]
+16:30:19.980 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.index()
+16:30:19.980 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.login()
+16:30:19.981 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.document()
+16:30:19.982 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.MainController.association()
+16:30:19.984 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String metrics.controller.TestController.test()
+16:30:19.988 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/createAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.createAssociation(metrics.rest.dto.AssociationRequest)
+16:30:19.989 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/updateAssociation],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.AssociationController.updateAssociation(metrics.rest.dto.AssociationRequest)
+16:30:19.989 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociations],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.rest.dto.AssociationResponse> metrics.rest.AssociationController.queryAssociations(metrics.rest.dto.AssociationCriteria)
+16:30:19.990 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/association/queryAssociationsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.AssociationController.queryAssociationsCount(metrics.rest.dto.AssociationCriteria)
+16:30:19.993 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.update(metrics.model.Document)
+16:30:19.994 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.create(metrics.model.Document)
+16:30:19.994 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.DocumentController.enabled(java.lang.Long,java.lang.Integer)
+16:30:19.994 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Document metrics.rest.DocumentController.findOne(java.lang.Long)
+16:30:19.994 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocumentsCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.DocumentController.queryDocumentsCount(metrics.rest.dto.DocumentQueryCriteria)
+16:30:19.995 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/document/queryDocuments],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Document> metrics.rest.DocumentController.queryDocuments(metrics.rest.dto.DocumentQueryCriteria)
+16:30:19.998 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.update(metrics.model.Theme)
+16:30:19.999 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.create(metrics.model.Theme)
+16:30:20.000 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/enabled],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void metrics.rest.ThemeController.enabled(java.lang.Long,java.lang.Integer)
+16:30:20.000 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemesCount],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Long metrics.rest.ThemeController.queryThemesCount(java.lang.String)
+16:30:20.000 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/findOne],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public metrics.model.Theme metrics.rest.ThemeController.findOne(java.lang.Long)
+16:30:20.001 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryValidThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryValidThemes()
+16:30:20.002 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/theme/queryThemes],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<metrics.model.Theme> metrics.rest.ThemeController.queryThemes(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)
+16:30:20.607 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:30:19 CST 2015]; parent: Root WebApplicationContext
+16:30:20.775 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Tue Aug 04 16:30:19 CST 2015]; parent: Root WebApplicationContext
+16:30:21.048 [main] INFO  metrics.controller.TestController - =============================
+16:30:21.297 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+16:30:21.446 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 2448 ms
+16:30:26.778 [qtp1005748084-19] INFO  metrics.rest.AssociationController - 远程主机：0:0:0:0:0:0:0:1:54792； 远程地址：0:0:0:0:0:0:0:1；参数：。业务：查询主题关联度信息
+16:30:26.919 [qtp1005748084-19] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+16:30:26.968 [qtp1005748084-19] INFO  o.s.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+16:31:45.095 [qtp1005748084-19] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/dashboard/ie-emulation-modes-warning.js] in DispatcherServlet with name 'appServlet'
+16:31:45.334 [qtp1005748084-13] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54978； 远程地址：0:0:0:0:0:0:0:1；参数：gender2;brandEN;brandCN;merchandiseName;merchandiseId;。业务：统计文档信息
+16:31:45.373 [qtp1005748084-18] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:31:45.464 [qtp1005748084-16] INFO  metrics.rest.DocumentController - 远程主机：0:0:0:0:0:0:0:1:54978； 远程地址：0:0:0:0:0:0:0:1；参数：merchandiseName;page0;directionASC;merchandiseId;gender2;brandEN;propertyid;brandCN;size20;。业务：查询文档信息
+16:31:59.266 [qtp1005748084-18] INFO  annotation.log.SystemLogAspect - Controller===metrics.controller.MainController=====index=====创建元词:=====
+16:32:00.449 [qtp1005748084-21] INFO  annotation.log.SystemLogAspect - Controller===metrics.controller.MainController=====index=====创建元词:=====
+16:32:00.835 [qtp1005748084-14] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54975； 远程地址：0:0:0:0:0:0:0:1；参数：word;。业务：统计查询主题词分页信息
+16:32:00.893 [qtp1005748084-13] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:32:00.918 [qtp1005748084-18] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54975； 远程地址：0:0:0:0:0:0:0:1；参数：word;propertyid;page0;directionASC;size20;。业务：查询主题词信息
+16:32:26.647 [qtp1005748084-16] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54975； 远程地址：0:0:0:0:0:0:0:1；参数：wordundefined;。业务：统计查询主题词分页信息
+16:32:26.684 [qtp1005748084-21] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54975； 远程地址：0:0:0:0:0:0:0:1；参数：wordundefined;propertyid;page0;directionASC;size20;。业务：查询主题词信息
+16:32:26.715 [qtp1005748084-17] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:32:29.022 [qtp1005748084-22] INFO  annotation.log.SystemLogAspect - Controller===metrics.controller.MainController=====index=====创建元词:=====
+16:32:29.204 [qtp1005748084-16] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54975； 远程地址：0:0:0:0:0:0:0:1；参数：word;。业务：统计查询主题词分页信息
+16:32:29.357 [qtp1005748084-17] WARN  org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/assets/flash/ZeroClipboard.swf] in DispatcherServlet with name 'appServlet'
+16:32:29.375 [qtp1005748084-14] INFO  metrics.rest.ThemeController - 远程主机：0:0:0:0:0:0:0:1:54975； 远程地址：0:0:0:0:0:0:0:1；参数：word;propertyid;page0;directionASC;size20;。业务：查询主题词信息

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="metrics.repo.mybatis.ComplexQueryRepo">
+	<select id="queryValidThemes" resultType="metrics.model.Theme">
+		SELECT
+		T . ID ID,
+		T .word word,
+		T .pinyin pinyin,
+		T .data_state dataState,
+		T .search_frequency searchFrequency,
+		T .created,
+		T .updated
+		FROM
+		theme T
+		WHERE
+		T.data_state=1
+	</select>
+	<!-- 主题 模块 查找 -->
+	<select id="queryThemes" resultType="metrics.model.Theme">
+
+		select t.id id,t.word word,t.pinyin pinyin,t.data_state
+		dataState,t.search_frequency searchFrequency,t.created,t.updated
+		from
+		theme t
+		<if test="word!=''">
+			where word like CONCAT('%',#{word},'%')
+		</if>
+		order by ${property} ${direction}
+		limit #{size} offset #{page};
+	</select>
+	<select id="queryThemseCount" parameterType="String" resultType="long">
+		select "count"(*)
+		from theme
+		<if test="word!=''">
+			where word like CONCAT('%',#{word},'%')
+		</if>
+	</select>
+
+
+	<!-- 文档模块的查询 -->
+	<select id="queryDocuments" parameterType="metrics.rest.dto.DocumentQueryCriteria"
+		resultType="metrics.model.Document">
+		SELECT
+		d. ID,
+		d.merchandise_id merchandiseId,
+		d.merchandise_name merchandiseName,
+		d.brandcn brandCN,
+		d.branden brandEN,
+		d.first_category firstCategory,
+		d.second_category secondCategory,
+		d.third_category thirdCategory,
+		d.fourth_category fourthCategory,
+		d.color,
+		d.gender,
+		d.data_state dataState,
+		d.created,
+		d.updated
+		FROM
+		"document" d
+		<where>
+			<if test="merchandiseId != null and merchandiseId!=''">
+				d.merchandise_id LIKE CONCAT('%',#{merchandiseId},'%')
+			</if>
+			<if test="merchandiseName != null and merchandiseName != ''">
+				AND d.merchandise_name LIKE
+				CONCAT('%',#{merchandiseName},'%')
+			</if>
+			<if test="brandCN != null and brandCN != ''">
+				AND d.brandcn LIKE CONCAT('%',#{brandCN},'%')
+			</if>
+			<if test="brandCN != null and brandCN != ''">
+				AND d.brandcn LIKE CONCAT('%',#{brandCN},'%')
+			</if>
+			<if test="brandEN != null and brandEN != ''">
+				AND d.branden LIKE CONCAT('%',#{brandEN},'%')
+			</if>
+			<if test="gender != 2">
+				AND d.gender = #{gender}
+			</if>
+		</where>
+		ORDER BY
+		${property} ${direction}
+		LIMIT #{size} OFFSET #{page}
+	</select>
+	<select id="queryDocumentsCount" parameterType="metrics.rest.dto.DocumentQueryCriteria"
+		resultType="java.lang.Long">
+		SELECT
+		COUNT (ID)
+		FROM
+		"document" d
+		<where>
+			<if test="merchandiseId != null and merchandiseId!=''">
+				d.merchandise_id LIKE CONCAT('%',#{merchandiseId},'%')
+			</if>
+			<if test="merchandiseName != null and merchandiseName != ''">
+				AND d.merchandise_name LIKE
+				CONCAT('%',#{merchandiseName},'%')
+			</if>
+			<if test="brandCN != null and brandCN != ''">
+				AND d.brandcn LIKE CONCAT('%',#{brandCN},'%')
+			</if>
+			<if test="brandCN != null and brandCN != ''">
+				AND d.brandcn LIKE CONCAT('%',#{brandCN},'%')
+			</if>
+			<if test="brandEN != null and brandEN != ''">
+				AND d.branden LIKE CONCAT('%',#{brandEN},'%')
+			</if>
+			<if test="gender != 2">
+				AND d.gender = #{gender}
+			</if>
+		</where>
+	</select>
+
+	<!-- 相关度查找 -->
+	<select id="queryAssociationsData" parameterType="metrics.rest.dto.AssociationCriteria"
+		resultType="metrics.rest.dto.AssociationResponse">
+		SELECT
+		tp.tid themeId,tp.w word,aa.VALUE,tp.did documentId,tp.merchandise_id
+		merchandiseId,
+		tp.merchandise_name merchandiseName,tp.brandcn brandCN,tp.branden
+		brandEN,tp.first_category firstCategory,
+		tp.second_category secondCategory,tp.third_category thirdCategory,tp.fourth_category
+		fourthCategory,tp.color,tp.gender
+		FROM
+		(
+		SELECT
+		T.ID tid,T.word w,d.ID
+		did,d.merchandise_id,d.merchandise_name,d.brandcn,d.branden,d.first_category,
+		d.second_category,d.third_category,d.fourth_category,d.color,d.gender
+		FROM
+		theme T,
+		DOCUMENT d
+		WHERE
+		d.data_state = 1 AND T .data_state = 1 AND
+		T . ID = #{themeId}
+		) tp
+		LEFT JOIN (
+		SELECT
+		*
+		FROM
+		association A
+		WHERE
+		A .theme_id = #{themeId}
+		ORDER BY
+		${property} ${direction}
+		LIMIT #{size} OFFSET #{page}
+		) aa ON tp.did = aa.document_id
+		<if test="flag == 0">
+			WHERE
+			aa.VALUE IS NULL
+		</if>
+		<if test="flag == 1">
+			WHERE
+			aa.VALUE IS NOT NULL
+		</if>
+	</select>
+	<select id="queryAssociationsDataCount" parameterType="metrics.rest.dto.AssociationCriteria"
+		resultType="java.lang.Long">
+		SELECT
+		count(tp.tid)
+		FROM
+		(
+		SELECT
+		T.ID tid,T.word w,d.ID did
+		FROM
+		theme T,
+		DOCUMENT d
+		WHERE
+		d.data_state = 1 AND T .data_state = 1 AND
+		T . ID = #{themeId}
+		) tp
+		LEFT JOIN (
+		SELECT
+		*
+		FROM
+		association A
+		WHERE
+		A .theme_id = #{themeId}
+		) aa ON tp.did = aa.document_id
+		<if test="flag == 0">
+			WHERE
+			aa.VALUE IS NULL
+		</if>
+		<if test="flag == 1">
+			WHERE
+			aa.VALUE IS NOT NULL
+		</if>
+	</select>
+
+	<select id="queryAssociations" parameterType="metrics.rest.dto.AssociationCriteria"
+		resultType="metrics.rest.dto.AssociationResponse">
+		SELECT
+		s.tid themeId,s.w word,A.VALUE,s.did documentId,s.merchandise_id
+		merchandiseId,
+		s.merchandise_name merchandiseName,s.brandcn brandCN,s.branden brandEN,s.first_category
+		firstCategory,
+		s.second_category secondCategory,s.third_category thirdCategory,s.fourth_category
+		fourthCategory,s.color,s.gender
+		FROM
+		(
+		SELECT
+		T . ID AS tid,
+		T .word w,
+		d. ID AS did,
+		d.*
+		FROM
+		DOCUMENT d,theme T
+		WHERE
+		d.data_state = 1 AND T .data_state = 1
+		ORDER BY
+		${property} ${direction}
+		LIMIT #{size} OFFSET #{page}
+		) s
+		LEFT JOIN association A ON s.tid = A .theme_id AND s.did = A
+		.document_id
+		<if test="flag == 0">
+			WHERE
+			A.VALUE IS NULL
+		</if>
+		<if test="flag == 1">
+			WHERE
+			A.VALUE IS NOT NULL
+		</if>
+
+	</select>
+
+	<select id="queryAssociationsCount" resultType="java.lang.Long">
+		SELECT
+		count(s.tid)
+		FROM
+		(
+		SELECT
+		T . ID AS tid,
+		T .word w,
+		d. ID AS did,
+		d.*
+		FROM
+		DOCUMENT d,theme T
+		WHERE
+		d.data_state = 1 AND T .data_state = 1
+		) s
+		LEFT JOIN association A ON s.tid = A .theme_id AND s.did = A
+		.document_id
+		<if test="flag == 0">
+			WHERE
+			aa.VALUE IS NULL
+		</if>
+		<if test="flag == 1">
+			WHERE
+			aa.VALUE IS NOT NULL
+		</if>
+	</select>
+<!-- 用户登录信息查询 -->
+
+<sql id="userSelect">
+	SELECT
+		u . id ,
+		u . name ,
+		u . pass ,
+		u . power
+		FROM
+		"user" u
+</sql>
+<select id="queryUser" resultType="metrics.model.User">
+<include refid="userSelect" />  
+ WHERE u.name=#{name}
+ AND   u.pass=#{pass}
+</select>
+
+</mapper>
